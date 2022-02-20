@@ -453,6 +453,28 @@ button:focus {
   margin-bottom: 50px;
 }
 
+.jobs-thumb {
+  position: relative;
+  z-index: -100;
+}
+
+.text-area > .jobs-descr {
+  margin: 0;
+}
+
+.text-area {
+  content: '';
+  position: absolute;
+  display: inline-flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 70px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 /* НАША КОМАНДА*/
 
 .team-list {
