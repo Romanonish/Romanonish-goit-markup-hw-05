@@ -22,6 +22,9 @@
   --portfolio-card-border: #eeeeee;
   --clients-border: #afb1b8;
 
+  /* Timing function */
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   /* Тень */
   --filter-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -129,6 +132,22 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color 250ms var(--timing-function);
+}
+
+.site-nav .item {
+  position: relative;
+}
+
+.site-nav .current.link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 .site-nav .link:hover,
@@ -146,12 +165,14 @@ img {
   color: var(--text-color);
   display: inline-flex;
   align-items: center;
+  transition: color 250ms var(--timing-function);
 }
 
 .tel {
   color: var(--text-color);
   display: inline-flex;
   align-items: center;
+  transition: color 250ms var(--timing-function);
 }
 
 .contacts .email,
@@ -230,6 +251,7 @@ img {
   padding: 10px 32px;
   background-color: var(--accent-color);
   color: var(--white-color);
+  transition: background-color 250ms var(--timing-function);
 
   font-family: Roboto;
   font-weight: 700;
@@ -254,6 +276,70 @@ button:focus {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.hero-backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms var(--timing-function);
+}
+
+.hero-backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-backdrop.is-hidden .hero-modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.hero-modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--white-color);
+  border-radius: 4px;
+  transition: transform 250ms var(--timing-function);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-close {
+  position: absolute;
+  display: inline-flex;
+  top: 8px;
+  right: 4px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.icon-close {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: fill 250ms var(--timing-function);
+}
+
+.button-close:hover,
+.button-close:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
 }
 
 /* ОСОБЕННОСТИ */
@@ -441,6 +527,7 @@ button:focus {
   width: 44px;
   height: 44px;
   color: var(--icon-color);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .social-icon {
@@ -487,6 +574,8 @@ button:focus {
   border: 1px solid var(--clients-border);
   color: var(--icon-color);
   border-radius: 4px;
+  transition: color 250ms var(--timing-function),
+    border 250ms var(--timing-function);
 }
 
 .clients-link:hover,
@@ -536,6 +625,8 @@ button:focus {
   cursor: pointer;
   text-align: center;
   letter-spacing: 0.03em;
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
 
 .filter-btn:hover,
@@ -595,6 +686,7 @@ button:focus {
 
 .works-link {
   display: inline-block;
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .works-link:hover,
@@ -623,11 +715,6 @@ button:focus {
   font-style: normal;
 }
 
-.footer .contacts:hover,
-.footer .contacts:focus {
-  color: var(--accent-color);
-}
-
 .footer .contacts {
   color: var(--white-transparency-06);
   text-decoration: none;
@@ -635,6 +722,12 @@ button:focus {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition: color 250ms var(--timing-function);
+}
+
+.footer .contacts:hover,
+.footer .contacts:focus {
+  color: var(--accent-color);
 }
 
 .footer {
