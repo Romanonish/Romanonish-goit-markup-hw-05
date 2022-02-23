@@ -279,6 +279,8 @@ button:focus {
   letter-spacing: 0.03em;
 }
 
+/* Модальное окно */
+
 .hero-backdrop {
   position: fixed;
   left: 0;
@@ -362,40 +364,6 @@ button:focus {
   padding-bottom: 94px;
 }
 
-/* .features-list .item::before {
-  content: '';
-  display: block;
-  max-width: 270px;
-  min-height: 120px;
-  margin-bottom: 30px;
-  background-color: var(--icon-bkgrnd);
-  border-radius: 4px;
-  background-repeat: no-repeat;
-  background-size: 70px;
-  background-position: center;
-}
-
-.antenna::before {
-  background-image: url(../images/antenna.svg);
-}
-
-.clock::before {
-  background-image: url(../images/clock.svg);
-} */
-
-/* .diagram::before {
-  background-image: url(../images/diagram.svg);
-}
-
-.astronaut::before {
-  background-image: url(../images/astronaut.svg);
-}
-
-.features::before {
-  padding-top: 94px;
-  padding-bottom: 94px;
-} */
-
 .features-list .feature-title {
   color: var(--title-color);
   font-weight: 700;
@@ -419,7 +387,9 @@ button:focus {
 .feature-text {
   margin: 0;
 }
+
 /* Оформление иконки */
+
 .thumb {
   display: flex;
   justify-content: center;
