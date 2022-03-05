@@ -567,8 +567,8 @@ button:focus {
   border: 1px solid var(--clients-border);
   color: var(--icon-color);
   border-radius: 4px;
-  transition: color 250ms var(--timing-function),
-    border 250ms var(--timing-function);
+  transition: color 2250ms var(--timing-function),
+    border 2250ms var(--timing-function);
 }
 
 .clients-link:hover,
@@ -797,4 +797,8 @@ button:focus {
 .footer > .container {
   display: flex;
   align-items: baseline;
+}
+
+.social-list .social-icon {
+  fill: var(--white-color);
 }
