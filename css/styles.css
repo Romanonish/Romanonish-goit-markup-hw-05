@@ -799,6 +799,6 @@ button:focus {
   align-items: baseline;
 }
 
-.social-list .social-icon {
+.footer-links .social-icon {
   fill: var(--white-color);
 }
