@@ -345,6 +345,32 @@ button:focus {
   color: var(--white-color);
 }
 
+/*формы модального окна  */
+
+.form-title {
+  color: var(--title-color);
+  margin-top: 40px;
+}
+
+.form-label {
+  color: var(--text-color);
+  text-align: left;
+}
+
+.order-form {
+}
+
+.order-form textarea {
+  resize: none;
+}
+
+.inputarea {
+  width: 448px;
+  margin-left: 41px;
+  display: flex;
+  flex-direction: column;
+}
+
 /* ОСОБЕННОСТИ */
 
 .features-list {
